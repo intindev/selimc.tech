@@ -8,6 +8,10 @@
   --background-end-rgb: 20, 20, 20;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -16,4 +20,9 @@ body {
     rgb(var(--background-end-rgb))
   );
   min-height: 100vh;
+}
+
+/* Hide scrollbar on hero-only entry experience */
+body:not(.scrolled) section#hero ~ * {
+  /* content below is naturally hidden until user scrolls */
 }
